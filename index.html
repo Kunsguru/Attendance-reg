@@ -5,3 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Register</title>
     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance Register</h1>
+
+        <form id="attendanceForm" class="form-section">
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+            <label for="reason">Reason:</label>
+            <input type="text" id="reason">
+            <button type="button" onclick="registerAttendance()">Register Arrival</button>
+        </form>
+        
+        <form id="leaveForm" class="form-section" style="display: none;">
+            <label for="leaveTime">Leave Time:</label>
+            <input type="time" id="leaveTime" required>
+            <label for="leaveReason">Reason:</label>
+            <input type="text" id="leaveReason">
+            <button type="button" onclick="recordLeave()">Submit Leave</button>
+        </form>
+        
+        <form id="returnForm" class="form-section" style="display: none;">
+            <label for="returnTime">Return Time:</label>
+            <input type="time" id="returnTime" required>
+            <label for="returnReason">Reason:</label>
+            <input type="text" id="returnReason">
+            <button type="button" onclick="recordReturn()">Submit Return</button>
+        </form>
+        
+        <form id="closingForm" class="form-section" style="display: none;">
+            <label for="closingTime">Closing Time:</label>
+            <input type="time" id="closingTime" required>
+            <label for="closingReason">Reason:</label>
+            <input type="text" id="closingReason">
+            <button type="button" onclick="recordClosing()">Submit Closing</button>
+        </form>
+        
+        <div class="form-section">
+            <button type="button" onclick="showLeaveForm()">Record Leave</button>
+            <button type="button" onclick="showReturnForm()">Record Return</button>
+            <button type="button" onclick="showClosingForm()">Record Closing</button>
+            <button type="button" onclick="promptPassword()">View Records</button>
+            <button type="button" onclick="readAnnouncement()">Read Announcements</button>
+        </div>
+        
+        <div id="recordBlock">
+            <pre id="records"></pre>
+            <h2>Registered Workers:</h2>
+            <pre id="workerList"></pre>
+            <button type="button" class="announcement-button" onclick="makeAnnouncement()">Create Announcement</button>
+            <textarea id="announcement" style="width: 100%; height: 50px; display: none;"></textarea>
+            <button type="button" class="announcement-button" onclick="submitAnnouncement()" style="display: none;">Submit Announcement</button>
+            <h2>Announcements:</h2>
+            <pre id="announcements"></pre>
+            <button type="button" class="close-button" onclick="closeRecordBlock()">Close</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
