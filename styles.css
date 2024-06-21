@@ -1,0 +1,72 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="time"],
+        input[type="text"],
+        input[type="password"],
+        input[type="file"],
+        input[type="email"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            display: block;
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 15px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .form-section {
+            margin-top: 20px;
+        }
+        #recordBlock {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            background: #f9f9f9;
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+        .delete-button {
+            background: #dc3545;
+            margin-top: 5px;
+        }
+        .announcement-button {
+            background: #28a745;
+            margin-top: 5px;
+        }
+        .close-button {
+            background: #6c757d;
+            margin-top: 5px;
+        }
